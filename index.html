@@ -1,0 +1,1982 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ГРИП — шиномонтаж в Москве | Запись за 30 секунд</title>
+<meta name="description" content="Шиномонтаж, балансировка, правка дисков и сезонное хранение шин. Работаем ежедневно 08:00–22:00. Фиксированные цены, гарантия 12 месяцев, без очередей.">
+<meta name="theme-color" content="#0b0c0e">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ГРИП — шиномонтаж в Москве">
+<meta property="og:description" content="Шиномонтаж без очередей. Фиксированные цены, гарантия 12 месяцев.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%230b0c0e'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%23ff6a00' stroke-width='3'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%23ff6a00'/%3E%3C/svg%3E">
+
+<style>
+  /* ---------- Токены ---------- */
+  :root {
+    --bg: #0b0c0e;
+    --bg-soft: #111316;
+    --surface: #16181c;
+    --surface-2: #1c1f24;
+    --line: rgba(255, 255, 255, .09);
+    --line-strong: rgba(255, 255, 255, .16);
+    --text: #f3f4f6;
+    --muted: #9aa1ab;
+    --accent: #ff6a00;
+    --accent-soft: rgba(255, 106, 0, .12);
+    --accent-2: #ffb340;
+    --radius: 16px;
+    --container: 1180px;
+    --shadow: 0 24px 60px -24px rgba(0, 0, 0, .8);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 92px;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  body.menu-open { overflow: hidden; }
+
+  img, svg { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+  button { font: inherit; color: inherit; }
+
+  h1, h2, h3 { margin: 0; font-weight: 700; letter-spacing: -.02em; line-height: 1.12; }
+  p { margin: 0; }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+
+  .container {
+    width: min(var(--container), 100% - 40px);
+    margin-inline: auto;
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /* ---------- Кнопки ---------- */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 24px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: transform .18s ease, background-color .18s ease,
+                border-color .18s ease, box-shadow .18s ease, color .18s ease;
+  }
+
+  .btn:active { transform: translateY(1px); }
+
+  .btn--primary {
+    background: var(--accent);
+    color: #160a00;
+    box-shadow: 0 10px 30px -12px rgba(255, 106, 0, .7);
+  }
+  .btn--primary:hover {
+    background: #ff7d1f;
+    box-shadow: 0 14px 34px -12px rgba(255, 106, 0, .85);
+    transform: translateY(-1px);
+  }
+
+  .btn--ghost {
+    background: transparent;
+    border-color: var(--line-strong);
+    color: var(--text);
+  }
+  .btn--ghost:hover { border-color: var(--accent); color: #fff; background: rgba(255, 106, 0, .06); }
+
+  .btn--block { width: 100%; }
+  .btn--lg { padding: 17px 30px; font-size: 16px; }
+
+  /* ---------- Верхняя полоса ---------- */
+  .topbar {
+    background: #08090a;
+    border-bottom: 1px solid var(--line);
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .topbar__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    min-height: 38px;
+    padding-block: 6px;
+  }
+  .topbar__item { display: inline-flex; align-items: center; gap: 8px; }
+  .topbar__dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: #35d07f;
+    box-shadow: 0 0 0 4px rgba(53, 208, 127, .15);
+    flex: none;
+  }
+  .topbar svg { width: 14px; height: 14px; opacity: .7; flex: none; }
+
+  /* ---------- Шапка ---------- */
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(11, 12, 14, .82);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid transparent;
+    transition: border-color .2s ease, background-color .2s ease;
+  }
+  .header.is-scrolled {
+    border-bottom-color: var(--line);
+    background: rgba(11, 12, 14, .94);
+  }
+  .header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    min-height: 74px;
+  }
+
+  .logo { display: inline-flex; align-items: center; gap: 11px; }
+  .logo svg { width: 38px; height: 38px; flex: none; }
+  .logo__text { display: flex; flex-direction: column; line-height: 1.1; }
+  .logo__name { font-size: 19px; font-weight: 800; letter-spacing: .16em; }
+  .logo__sub { font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
+
+  .nav { display: flex; align-items: center; gap: 28px; }
+  .nav__link {
+    position: relative;
+    font-size: 14px;
+    color: var(--muted);
+    padding-block: 6px;
+    transition: color .18s ease;
+  }
+  .nav__link::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 100%;
+    bottom: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: right .22s ease;
+  }
+  .nav__link:hover { color: var(--text); }
+  .nav__link:hover::after { right: 0; }
+
+  .header__actions { display: flex; align-items: center; gap: 18px; }
+
+  .phone { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 15px; }
+  .phone svg { width: 16px; height: 16px; color: var(--accent); }
+  .phone:hover { color: var(--accent-2); }
+
+  .burger {
+    display: none;
+    width: 44px; height: 44px;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 1px solid var(--line-strong);
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .burger span {
+    position: relative;
+    display: block;
+    width: 18px; height: 2px;
+    background: currentColor;
+    border-radius: 2px;
+    transition: transform .2s ease, background-color .2s ease;
+  }
+  .burger span::before,
+  .burger span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 18px; height: 2px;
+    background: currentColor;
+    border-radius: 2px;
+    transition: transform .2s ease;
+  }
+  .burger span::before { top: -6px; }
+  .burger span::after { top: 6px; }
+
+  .menu-open .burger span { background: transparent; }
+  .menu-open .burger span::before { transform: translateY(6px) rotate(45deg); }
+  .menu-open .burger span::after { transform: translateY(-6px) rotate(-45deg); }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative;
+    padding: 84px 0 72px;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    top: -320px; right: -180px;
+    width: 780px; height: 780px;
+    background: radial-gradient(circle, rgba(255, 106, 0, .18) 0%, rgba(255, 106, 0, .05) 42%, transparent 68%);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, .045) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, .045) 1px, transparent 1px);
+    background-size: 64px 64px;
+    -webkit-mask-image: radial-gradient(ellipse at 70% 20%, #000 0%, transparent 72%);
+    mask-image: radial-gradient(ellipse at 70% 20%, #000 0%, transparent 72%);
+    pointer-events: none;
+  }
+
+  .hero__grid {
+    display: grid;
+    grid-template-columns: 1.06fr .94fr;
+    gap: 56px;
+    align-items: center;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 20px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 26px; height: 2px;
+    background: var(--accent);
+    border-radius: 2px;
+  }
+
+  .hero h1 {
+    font-size: clamp(34px, 5.4vw, 62px);
+    font-weight: 800;
+    letter-spacing: -.03em;
+    margin-bottom: 22px;
+  }
+  .hero h1 em {
+    font-style: normal;
+    color: var(--accent);
+  }
+
+  .hero__lead {
+    font-size: clamp(16px, 1.6vw, 18px);
+    color: var(--muted);
+    max-width: 52ch;
+    margin-bottom: 32px;
+  }
+
+  .hero__actions { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 34px; }
+
+  .hero__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 22px;
+    font-size: 13.5px;
+    color: var(--muted);
+  }
+  .hero__meta span { display: inline-flex; align-items: center; gap: 8px; }
+  .hero__meta svg { width: 15px; height: 15px; color: var(--accent); flex: none; }
+
+  .stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px 44px;
+    margin-top: 44px;
+    padding-top: 30px;
+    border-top: 1px solid var(--line);
+  }
+  .stat__value {
+    font-size: clamp(24px, 2.6vw, 30px);
+    font-weight: 800;
+    letter-spacing: -.02em;
+    line-height: 1.1;
+  }
+  .stat__value sup { color: var(--accent); font-size: .6em; }
+  .stat__label { font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+
+  /* Колесо */
+  .hero__visual {
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-height: 380px;
+  }
+  .wheel-wrap {
+    position: relative;
+    width: min(100%, 440px);
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+  }
+  .wheel-wrap::before {
+    content: "";
+    position: absolute;
+    inset: 4%;
+    border-radius: 50%;
+    background: radial-gradient(circle at 50% 45%, rgba(255, 106, 0, .16), transparent 62%);
+    filter: blur(20px);
+  }
+  .wheel {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 30px 50px rgba(0, 0, 0, .55));
+  }
+  .wheel__rim { transform-origin: 160px 160px; animation: spin 26s linear infinite; }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .chip {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 11px 15px;
+    border-radius: 13px;
+    background: rgba(22, 24, 28, .86);
+    border: 1px solid var(--line-strong);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    font-size: 13px;
+    line-height: 1.25;
+    animation: float 6s ease-in-out infinite;
+  }
+  .chip--tl { top: 6%; left: -2%; }
+  .chip--br { bottom: 8%; right: -1%; animation-delay: -3s; }
+  .chip__value { font-size: 17px; font-weight: 800; letter-spacing: -.02em; }
+  .chip__label { color: var(--muted); font-size: 12px; }
+  .chip__icon {
+    display: grid;
+    place-items: center;
+    width: 36px; height: 36px;
+    border-radius: 10px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    flex: none;
+  }
+  .chip__icon svg { width: 18px; height: 18px; }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-9px); }
+  }
+
+  /* ---------- Секции ---------- */
+  .section { padding: 84px 0; border-top: 1px solid var(--line); }
+  .section--soft { background: linear-gradient(180deg, rgba(255, 255, 255, .018), transparent 60%); }
+
+  .section__head {
+    max-width: 640px;
+    margin-bottom: 44px;
+  }
+  .section__head h2 {
+    font-size: clamp(27px, 3.6vw, 40px);
+    margin-bottom: 14px;
+  }
+  .section__head p { color: var(--muted); font-size: 16.5px; }
+
+  /* ---------- Услуги ---------- */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .card {
+    position: relative;
+    padding: 26px;
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
+    background: linear-gradient(180deg, var(--surface) 0%, #121418 100%);
+    transition: transform .22s ease, border-color .22s ease, background-color .22s ease;
+    overflow: hidden;
+  }
+  .card::after {
+    content: "";
+    position: absolute;
+    inset: auto -40% -70% auto;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 106, 0, .16), transparent 70%);
+    opacity: 0;
+    transition: opacity .25s ease;
+    pointer-events: none;
+  }
+  .card:hover { transform: translateY(-4px); border-color: rgba(255, 106, 0, .42); }
+  .card:hover::after { opacity: 1; }
+
+  .card__icon {
+    display: grid;
+    place-items: center;
+    width: 46px; height: 46px;
+    border-radius: 12px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    margin-bottom: 18px;
+  }
+  .card__icon svg { width: 24px; height: 24px; }
+
+  .card h3 { font-size: 18.5px; margin-bottom: 8px; }
+  .card p { color: var(--muted); font-size: 14.5px; margin-bottom: 18px; }
+
+  .card__price {
+    display: flex;
+    align-items: baseline;
+    gap: 7px;
+    padding-top: 16px;
+    border-top: 1px dashed var(--line);
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .card__price strong { font-size: 19px; color: var(--text); font-weight: 700; letter-spacing: -.01em; }
+
+  /* ---------- Преимущества ---------- */
+  .features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 16px;
+  }
+  .feature {
+    padding: 22px;
+    border-radius: 14px;
+    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, .02);
+  }
+  .feature__num {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+  .feature h3 { font-size: 16px; margin-bottom: 6px; }
+  .feature p { font-size: 13.5px; color: var(--muted); }
+
+  /* ---------- Цены ---------- */
+  .prices__layout {
+    display: grid;
+    grid-template-columns: 1.35fr .65fr;
+    gap: 24px;
+    align-items: start;
+  }
+
+  .table-card {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    overflow: hidden;
+  }
+  .table-scroll { overflow-x: auto; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 460px;
+    font-variant-numeric: tabular-nums;
+  }
+  thead th {
+    text-align: left;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 18px 24px;
+    border-bottom: 1px solid var(--line);
+    white-space: nowrap;
+  }
+  thead th:not(:first-child) { text-align: right; }
+  tbody td {
+    padding: 17px 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, .05);
+    font-size: 15px;
+    white-space: nowrap;
+  }
+  tbody td:not(:first-child) { text-align: right; }
+  tbody tr { transition: background-color .18s ease; }
+  tbody tr:hover { background: rgba(255, 106, 0, .06); }
+  tbody tr:last-child td { border-bottom: 0; }
+  tbody td strong { font-weight: 700; }
+  tbody td span { color: var(--muted); font-size: 13px; }
+
+  .badge {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 2px 8px;
+    border-radius: 20px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    vertical-align: middle;
+  }
+
+  .table-note {
+    padding: 16px 24px;
+    font-size: 13px;
+    color: var(--muted);
+    border-top: 1px solid var(--line);
+    background: rgba(0, 0, 0, .18);
+  }
+
+  .price-side {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .price-side__box {
+    padding: 24px;
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
+    background: var(--surface);
+  }
+  .price-side__box h3 { font-size: 16px; margin-bottom: 14px; }
+  .checklist { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .checklist li {
+    position: relative;
+    padding-left: 28px;
+    font-size: 14px;
+    color: var(--muted);
+  }
+  .checklist li svg {
+    position: absolute;
+    left: 0; top: 3px;
+    width: 16px; height: 16px;
+    color: var(--accent);
+  }
+  .price-side__cta {
+    padding: 24px;
+    border-radius: var(--radius);
+    border: 1px solid rgba(255, 106, 0, .28);
+    background: linear-gradient(180deg, rgba(255, 106, 0, .13), rgba(255, 106, 0, .04));
+  }
+  .price-side__cta h3 { font-size: 16px; }
+  .price-side__cta p { font-size: 14px; color: var(--muted); margin-bottom: 16px; }
+
+  /* ---------- Как работаем ---------- */
+  .steps {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    counter-reset: step;
+  }
+  .step {
+    position: relative;
+    padding: 26px 22px;
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
+    background: var(--surface);
+  }
+  .step__num {
+    display: grid;
+    place-items: center;
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 106, 0, .4);
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 16px;
+  }
+  .step h3 { font-size: 16px; margin-bottom: 6px; }
+  .step p { font-size: 13.5px; color: var(--muted); }
+
+  /* ---------- Запись ---------- */
+  .booking {
+    position: relative;
+    padding: 84px 0;
+    border-top: 1px solid var(--line);
+    overflow: hidden;
+  }
+  .booking::before {
+    content: "";
+    position: absolute;
+    inset: auto 55% -420px auto;
+    width: 760px; height: 760px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 106, 0, .14), transparent 66%);
+    pointer-events: none;
+  }
+  .booking__panel {
+    position: relative;
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 48px;
+    padding: 46px;
+    border-radius: 24px;
+    border: 1px solid var(--line-strong);
+    background: linear-gradient(145deg, #191c21 0%, #101216 60%);
+    box-shadow: var(--shadow);
+  }
+  .booking__panel h2 { font-size: clamp(26px, 3vw, 34px); margin-bottom: 14px; }
+  .booking__panel > div > p { color: var(--muted); font-size: 15.5px; margin-bottom: 26px; }
+
+  .booking__contacts { display: grid; gap: 14px; margin-top: 8px; }
+  .booking__contact { display: flex; align-items: flex-start; gap: 12px; font-size: 14.5px; }
+  .booking__contact svg { width: 18px; height: 18px; color: var(--accent); flex: none; margin-top: 3px; }
+  .booking__contact span { color: var(--muted); font-size: 12.5px; display: block; }
+  .booking__contact b { font-weight: 600; }
+
+  /* ---------- Форма ---------- */
+  .form { display: grid; gap: 16px; }
+  .form__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .field { display: grid; gap: 6px; }
+  .field--full { grid-column: 1 / -1; }
+  .field label { font-size: 12.5px; color: var(--muted); font-weight: 500; }
+
+  .field input,
+  .field select {
+    width: 100%;
+    height: 48px;
+    padding: 0 14px;
+    border-radius: 10px;
+    border: 1px solid var(--line-strong);
+    background: rgba(0, 0, 0, .3);
+    color: var(--text);
+    font: inherit;
+    font-size: 15px;
+    transition: border-color .16s ease, box-shadow .16s ease, background-color .16s ease;
+    color-scheme: dark;
+  }
+  .field input::placeholder { color: #6b727d; }
+  .field select {
+    appearance: none;
+    -webkit-appearance: none;
+    padding-right: 38px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5L6 6.5l5-5' fill='none' stroke='%239aa1ab' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+  }
+  .field select option { background: #16181c; color: var(--text); }
+
+  .field input:focus,
+  .field select:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(255, 106, 0, .16);
+    background: rgba(0, 0, 0, .45);
+  }
+  .field.has-error input,
+  .field.has-error select { border-color: #ff4d4d; }
+
+  .field__error {
+    font-size: 12px;
+    color: #ff7a7a;
+    min-height: 0;
+    display: none;
+  }
+  .field.has-error .field__error { display: block; }
+
+  .checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--muted);
+    cursor: pointer;
+    user-select: none;
+  }
+  .checkbox input {
+    width: 18px; height: 18px;
+    margin: 2px 0 0;
+    accent-color: var(--accent);
+    flex: none;
+    cursor: pointer;
+  }
+  .checkbox.has-error { color: #ff7a7a; }
+
+  .form__hint { font-size: 12.5px; color: var(--muted); text-align: center; }
+
+  .form-success {
+    display: none;
+    padding: 34px;
+    border-radius: 16px;
+    border: 1px solid rgba(53, 208, 127, .35);
+    background: rgba(53, 208, 127, .07);
+    text-align: center;
+  }
+  .form-success.is-visible { display: block; }
+  .form-success__icon {
+    display: grid;
+    place-items: center;
+    width: 56px; height: 56px;
+    margin: 0 auto 16px;
+    border-radius: 50%;
+    background: rgba(53, 208, 127, .14);
+    color: #35d07f;
+  }
+  .form-success__icon svg { width: 28px; height: 28px; }
+  .form-success h3 { font-size: 20px; margin-bottom: 8px; }
+  .form-success p { color: var(--muted); font-size: 14.5px; margin-bottom: 20px; }
+  .form-success button {
+    background: none;
+    border: 0;
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  /* ---------- Отзывы ---------- */
+  .reviews {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .review {
+    padding: 26px;
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
+    background: var(--surface);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .stars { display: flex; gap: 3px; color: var(--accent-2); font-size: 15px; letter-spacing: 2px; }
+  .review p { font-size: 14.5px; color: #d3d7dd; flex: 1; }
+  .review__author { display: flex; align-items: center; gap: 12px; padding-top: 14px; border-top: 1px solid var(--line); }
+  .avatar {
+    display: grid;
+    place-items: center;
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    background: var(--surface-2);
+    border: 1px solid var(--line-strong);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--accent);
+    flex: none;
+  }
+  .review__author b { display: block; font-size: 14px; font-weight: 600; }
+  .review__author span { font-size: 12.5px; color: var(--muted); }
+
+  /* ---------- Контакты ---------- */
+  .contacts__grid {
+    display: grid;
+    grid-template-columns: .85fr 1.15fr;
+    gap: 32px;
+    align-items: stretch;
+  }
+  .contacts__list { display: grid; gap: 22px; align-content: start; }
+  .contact-row { display: flex; gap: 14px; }
+  .contact-row__icon {
+    display: grid;
+    place-items: center;
+    width: 42px; height: 42px;
+    border-radius: 11px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    flex: none;
+  }
+  .contact-row__icon svg { width: 20px; height: 20px; }
+  .contact-row b { display: block; font-size: 15px; font-weight: 600; margin-bottom: 2px; }
+  .contact-row p, .contact-row a { color: var(--muted); font-size: 14px; }
+  .contact-row a:hover { color: var(--accent-2); }
+
+  .map {
+    position: relative;
+    min-height: 340px;
+    border-radius: var(--radius);
+    border: 1px solid var(--line-strong);
+    overflow: hidden;
+    background:
+      linear-gradient(115deg, transparent 46%, rgba(255, 255, 255, .05) 46%, rgba(255, 255, 255, .05) 48%, transparent 48%),
+      linear-gradient(25deg, transparent 62%, rgba(255, 255, 255, .045) 62%, rgba(255, 255, 255, .045) 64%, transparent 64%),
+      linear-gradient(0deg, #121519, #0e1013);
+  }
+  .map::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, .05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, .05) 1px, transparent 1px);
+    background-size: 42px 42px;
+    opacity: .55;
+  }
+  .map::after {
+    content: "";
+    position: absolute;
+    left: -10%; right: -10%;
+    top: 55%;
+    height: 26px;
+    background: rgba(255, 106, 0, .12);
+    border-block: 1px solid rgba(255, 106, 0, .25);
+    transform: rotate(-8deg);
+  }
+  .map__pin {
+    position: absolute;
+    left: 50%; top: 48%;
+    transform: translate(-50%, -100%);
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    width: 46px; height: 46px;
+    border-radius: 50% 50% 50% 4px;
+    background: var(--accent);
+    color: #160a00;
+    box-shadow: 0 12px 30px -6px rgba(255, 106, 0, .7);
+    rotate: -45deg;
+  }
+  .map__pin svg { width: 22px; height: 22px; rotate: 45deg; }
+  .map__pulse {
+    position: absolute;
+    left: 50%; top: 48%;
+    width: 120px; height: 120px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 106, 0, .22), transparent 65%);
+    animation: pulse 2.8s ease-out infinite;
+    z-index: 1;
+  }
+  @keyframes pulse {
+    0% { transform: translate(-50%, -50%) scale(.4); opacity: .9; }
+    100% { transform: translate(-50%, -50%) scale(1.5); opacity: 0; }
+  }
+  .map__label {
+    position: absolute;
+    left: 18px; bottom: 18px;
+    z-index: 3;
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: rgba(11, 12, 14, .85);
+    border: 1px solid var(--line-strong);
+    backdrop-filter: blur(8px);
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .map__label b { display: block; color: var(--text); font-size: 14px; font-weight: 600; }
+  .map__link {
+    position: absolute;
+    right: 18px; bottom: 18px;
+    z-index: 3;
+    font-size: 13px;
+  }
+
+  /* ---------- Подвал ---------- */
+  .footer {
+    border-top: 1px solid var(--line);
+    padding: 48px 0 32px;
+    background: #08090a;
+  }
+  .footer__grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 32px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--line);
+  }
+  .footer p { color: var(--muted); font-size: 13.5px; }
+  .footer h4 {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    color: var(--muted);
+    font-weight: 600;
+    margin: 0 0 14px;
+  }
+  .footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  .footer ul a { color: #c9ced6; font-size: 14px; }
+  .footer ul a:hover { color: var(--accent); }
+  .footer__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding-top: 24px;
+    font-size: 12.5px;
+    color: #767d88;
+  }
+
+  /* ---------- Мобильная панель ---------- */
+  .mobile-bar {
+    position: fixed;
+    z-index: 60;
+    left: 0; right: 0; bottom: 0;
+    display: none;
+    gap: 10px;
+    padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+    background: rgba(11, 12, 14, .94);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-top: 1px solid var(--line-strong);
+  }
+  .mobile-bar .btn { flex: 1; padding: 13px 12px; font-size: 14.5px; }
+
+  /* ---------- Анимация появления ---------- */
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity .6s ease, transform .6s ease;
+  }
+  .reveal.is-visible { opacity: 1; transform: none; }
+
+  /* ---------- Адаптив ---------- */
+  @media (max-width: 1080px) {
+    .hero__grid { gap: 32px; }
+    .cards { grid-template-columns: repeat(2, 1fr); }
+    .features { grid-template-columns: repeat(2, 1fr); }
+    .steps { grid-template-columns: repeat(2, 1fr); }
+    .reviews { grid-template-columns: 1fr 1fr; }
+    .booking__panel { grid-template-columns: 1fr; gap: 34px; padding: 34px; }
+    .prices__layout { grid-template-columns: 1fr; }
+    .price-side { display: grid; grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 900px) {
+    .topbar__inner { justify-content: center; }
+    .topbar__item--hide { display: none; }
+
+    .nav {
+      position: absolute;
+      top: 100%; left: 0; right: 0;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 4px;
+      padding: 12px 20px 20px;
+      background: rgba(11, 12, 14, .98);
+      border-bottom: 1px solid var(--line);
+      transform: translateY(-8px);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .2s ease, transform .2s ease, visibility .2s;
+    }
+    .menu-open .nav { opacity: 1; transform: none; visibility: visible; }
+    .nav__link { padding: 12px 4px; font-size: 16px; border-bottom: 1px solid var(--line); }
+    .nav__link::after { display: none; }
+
+    .header__inner { min-height: 66px; }
+    .header__actions .phone { display: none; }
+    .header__actions .btn { display: none; }
+    .burger { display: inline-flex; }
+
+    .hero { padding: 56px 0 48px; }
+    .hero__grid { grid-template-columns: 1fr; }
+    .hero__visual { order: -1; min-height: 0; }
+    .wheel-wrap { width: min(100%, 320px); }
+    .chip--tl { left: 0; top: 2%; }
+    .chip--br { right: 0; bottom: 2%; }
+    .hero__actions .btn { flex: 1 1 auto; }
+
+    .section { padding: 64px 0; }
+    .contacts__grid { grid-template-columns: 1fr; }
+    .footer__grid { grid-template-columns: 1fr 1fr; }
+    .footer__grid > div:first-child { grid-column: 1 / -1; }
+  }
+
+  @media (max-width: 620px) {
+    .container { width: min(var(--container), 100% - 32px); }
+    .cards { grid-template-columns: 1fr; }
+    .features { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: 1fr; }
+    .reviews { grid-template-columns: 1fr; }
+    .price-side { grid-template-columns: 1fr; }
+    .form__grid { grid-template-columns: 1fr; }
+    .booking__panel { padding: 26px 20px; border-radius: 18px; }
+    .stats { gap: 18px 28px; }
+    .stat__value { font-size: 22px; }
+    .mobile-bar { display: flex; }
+    body { padding-bottom: 74px; }
+    .map { min-height: 280px; }
+    .map__link { display: none; }
+    .chip { padding: 9px 12px; font-size: 12px; }
+    .chip__icon { width: 30px; height: 30px; }
+    .chip__value { font-size: 15px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: .001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: .001ms !important;
+    }
+    .reveal { opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Верхняя полоса -->
+<div class="topbar">
+  <div class="container topbar__inner">
+    <span class="topbar__item">
+      <span class="topbar__dot" aria-hidden="true"></span>
+      Работаем прямо сейчас: 08:00–22:00
+    </span>
+    <span class="topbar__item topbar__item--hide">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 6-9 12-9 12S3 16 3 10a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+      Москва, ул. Автозаводская, 18
+    </span>
+  </div>
+</div>
+
+<!-- Шапка -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a class="logo" href="#top" aria-label="ГРИП — на главную">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <circle cx="24" cy="24" r="22" fill="#141619" stroke="#2b2f36" stroke-width="2"/>
+        <circle cx="24" cy="24" r="15" fill="none" stroke="#3a3f47" stroke-width="4" stroke-dasharray="4 5"/>
+        <circle cx="24" cy="24" r="9" fill="none" stroke="#ff6a00" stroke-width="3"/>
+        <circle cx="24" cy="24" r="3" fill="#ff6a00"/>
+      </svg>
+      <span class="logo__text">
+        <span class="logo__name">ГРИП</span>
+        <span class="logo__sub">шиномонтаж</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a class="nav__link" href="#services">Услуги</a>
+      <a class="nav__link" href="#prices">Цены</a>
+      <a class="nav__link" href="#process">Как работаем</a>
+      <a class="nav__link" href="#reviews">Отзывы</a>
+      <a class="nav__link" href="#contacts">Контакты</a>
+    </nav>
+
+    <div class="header__actions">
+      <a class="phone" href="tel:+74951234567">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z"/></svg>
+        +7 (495) 123-45-67
+      </a>
+      <a class="btn btn--primary" href="#booking">Записаться</a>
+      <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero__grid">
+      <div>
+        <span class="eyebrow">Шиномонтаж в Москве</span>
+        <h1>Переобуем за <em>30 минут</em>. Без записи и очередей.</h1>
+        <p class="hero__lead">
+          Шиномонтаж, балансировка, правка дисков и сезонное хранение.
+          Фиксированные цены, аккуратная работа с литьём и гарантия 12 месяцев.
+        </p>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary btn--lg" href="#booking">Записаться онлайн</a>
+          <a class="btn btn--ghost btn--lg" href="#prices">Смотреть цены</a>
+        </div>
+
+        <div class="hero__meta">
+          <span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            Ежедневно 08:00–22:00
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 6-9 12-9 12S3 16 3 10a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            Ул. Автозаводская, 18
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 4v5c0 4.5-3 8-7 9-4-1-7-4.5-7-9V7l7-4Z"/><path d="m9 12 2 2 4-4"/></svg>
+            Гарантия 12 месяцев
+          </span>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat__value">12 <sup>лет</sup></div>
+            <div class="stat__label">работаем в Москве</div>
+          </div>
+          <div class="stat">
+            <div class="stat__value">40 000+</div>
+            <div class="stat__label">колёс в год</div>
+          </div>
+          <div class="stat">
+            <div class="stat__value">4.9 <sup>★</sup></div>
+            <div class="stat__label">1 200+ отзывов</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__visual" aria-hidden="true">
+        <div class="wheel-wrap">
+          <svg class="wheel" viewBox="0 0 320 320">
+            <defs>
+              <radialGradient id="tireGrad" cx="42%" cy="34%" r="72%">
+                <stop offset="0%" stop-color="#2a2e35"/>
+                <stop offset="55%" stop-color="#191c21"/>
+                <stop offset="100%" stop-color="#0d0f12"/>
+              </radialGradient>
+              <linearGradient id="rimGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#4b525c"/>
+                <stop offset="45%" stop-color="#2d323a"/>
+                <stop offset="100%" stop-color="#484f59"/>
+              </linearGradient>
+            </defs>
+
+            <circle cx="160" cy="160" r="150" fill="url(#tireGrad)" stroke="#252a31" stroke-width="14"/>
+            <circle cx="160" cy="160" r="134" fill="none" stroke="#3c424c" stroke-width="9" stroke-dasharray="5 11" opacity=".85"/>
+            <circle cx="160" cy="160" r="118" fill="none" stroke="#15181c" stroke-width="12"/>
+
+            <circle cx="160" cy="160" r="92" fill="#101317" stroke="#3b414b" stroke-width="3"/>
+
+            <g class="wheel__rim">
+              <g stroke="url(#rimGrad)" stroke-width="17" stroke-linecap="round">
+                <line x1="160" y1="160" x2="160" y2="76"/>
+                <line x1="160" y1="160" x2="160" y2="76" transform="rotate(72 160 160)"/>
+                <line x1="160" y1="160" x2="160" y2="76" transform="rotate(144 160 160)"/>
+                <line x1="160" y1="160" x2="160" y2="76" transform="rotate(216 160 160)"/>
+                <line x1="160" y1="160" x2="160" y2="76" transform="rotate(288 160 160)"/>
+              </g>
+              <circle cx="160" cy="160" r="88" fill="none" stroke="#565e6a" stroke-width="2" opacity=".6"/>
+              <circle cx="160" cy="160" r="34" fill="#1b1f25" stroke="#4d545f" stroke-width="2"/>
+              <circle cx="160" cy="160" r="24" fill="#ff6a00"/>
+              <circle cx="160" cy="160" r="9" fill="#0b0c0e"/>
+              <g fill="#8892a0">
+                <circle cx="160" cy="118" r="3.4"/>
+                <circle cx="200" cy="149" r="3.4"/>
+                <circle cx="185" cy="196" r="3.4"/>
+                <circle cx="135" cy="196" r="3.4"/>
+                <circle cx="120" cy="149" r="3.4"/>
+              </g>
+            </g>
+          </svg>
+
+          <div class="chip chip--tl">
+            <span class="chip__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            </span>
+            <span>
+              <span class="chip__value">30 мин</span>
+              <span class="chip__label">средний визит</span>
+            </span>
+          </div>
+
+          <div class="chip chip--br">
+            <span class="chip__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.8l6.5-.9L12 3Z"/></svg>
+            </span>
+            <span>
+              <span class="chip__value">4.9 из 5</span>
+              <span class="chip__label">Яндекс · 1 200 отзывов</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Услуги -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="eyebrow">Услуги</span>
+        <h2>Всё для колёс — в одном месте</h2>
+        <p>От сезонной «переобувки» до правки литых дисков. Цены фиксированные: называем стоимость до начала работ.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card reveal">
+          <span class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v6M12 15v6M3 12h6M15 12h6"/></svg>
+          </span>
+          <h3>Шиномонтаж</h3>
+          <p>Снятие, монтаж, накачка и протяжка моментом. Работаем с R13–R22, включая низкопрофильные шины.</p>
+          <div class="card__price"><strong>от 600 ₽</strong> / колесо</div>
+        </article>
+
+        <article class="card reveal">
+          <span class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/><path d="M12 3a9 9 0 0 1 0 18" stroke-dasharray="2 3"/></svg>
+          </span>
+          <h3>Балансировка</h3>
+          <p>Точная балансировка на стенде с адаптером под литьё — без царапин на дисках и вибраций на скорости.</p>
+          <div class="card__price"><strong>от 300 ₽</strong> / колесо</div>
+        </article>
+
+        <article class="card reveal">
+          <span class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L4 17v3h3l5.3-5.3a4 4 0 0 0 5.4-5.4l-2.3 2.3-2-2 2.3-2.3Z"/></svg>
+          </span>
+          <h3>Правка дисков</h3>
+          <p>Прокатка стальных и правка литых дисков на станке. Проверяем геометрию и биение на стенде.</p>
+          <div class="card__price"><strong>от 800 ₽</strong> / диск</div>
+        </article>
+
+        <article class="card reveal">
+          <span class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>
+          </span>
+          <h3>Ремонт проколов</h3>
+          <p>Жгут, грибок или вулканизация — подбираем по типу повреждения. Проверяем на герметичность.</p>
+          <div class="card__price"><strong>от 500 ₽</strong> / прокол</div>
+        </article>
+
+        <article class="card reveal">
+          <span class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8l9 5 9-5Z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg>
+          </span>
+          <h3>Сезонное хранение</h3>
+          <p>Сухой отапливаемый склад, маркировка комплекта и страховка. Забираете — когда удобно.</p>
+          <div class="card__price"><strong>от 2 500 ₽</strong> / сезон</div>
+        </article>
+
+        <article class="card reveal">
+          <span class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18a8 8 0 1 1 16 0"/><path d="m12 14 4-4"/><circle cx="12" cy="14" r="1.6"/></svg>
+          </span>
+          <h3>Азот и давление</h3>
+          <p>Подкачка азотом, проверка давления и датчиков TPMS. Стабильное давление — меньше износ.</p>
+          <div class="card__price"><strong>300 ₽</strong> / комплект</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Преимущества -->
+  <section class="section section--soft" aria-label="Почему выбирают нас">
+    <div class="container">
+      <div class="features">
+        <div class="feature reveal">
+          <div class="feature__num">01</div>
+          <h3>Фиксированная цена</h3>
+          <p>Стоимость называем до работ. Никаких «доплат по факту».</p>
+        </div>
+        <div class="feature reveal">
+          <div class="feature__num">02</div>
+          <h3>Не портим диски</h3>
+          <p>Пластиковые накладки на станке и адаптеры для литья.</p>
+        </div>
+        <div class="feature reveal">
+          <div class="feature__num">03</div>
+          <h3>Гарантия 12 месяцев</h3>
+          <p>На работы и герметичность — письменная гарантия.</p>
+        </div>
+        <div class="feature reveal">
+          <div class="feature__num">04</div>
+          <h3>Без записи</h3>
+          <p>Приезжайте в любое время: 3 поста, живая очередь.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Цены -->
+  <section class="section" id="prices">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="eyebrow">Цены</span>
+        <h2>Прозрачный прайс без сюрпризов</h2>
+        <p>Комплект из 4 колёс: снятие, монтаж, балансировка, накачка и протяжка. Снятые с автомобиля колёса — на 20% дешевле.</p>
+      </div>
+
+      <div class="prices__layout">
+        <div class="table-card reveal">
+          <div class="table-scroll">
+            <table>
+              <caption class="visually-hidden">Цены на шиномонтаж по радиусу колёс</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Радиус</th>
+                  <th scope="col">Комплект, 4 колеса</th>
+                  <th scope="col">Одно колесо</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>R13–R15</td>
+                  <td><strong>2 200 ₽</strong></td>
+                  <td>600 ₽</td>
+                </tr>
+                <tr>
+                  <td>R16 <span class="badge">Хит</span></td>
+                  <td><strong>2 600 ₽</strong></td>
+                  <td>700 ₽</td>
+                </tr>
+                <tr>
+                  <td>R17 <span class="badge">Хит</span></td>
+                  <td><strong>3 000 ₽</strong></td>
+                  <td>800 ₽</td>
+                </tr>
+                <tr>
+                  <td>R18</td>
+                  <td><strong>3 400 ₽</strong></td>
+                  <td>900 ₽</td>
+                </tr>
+                <tr>
+                  <td>R19</td>
+                  <td><strong>3 800 ₽</strong></td>
+                  <td>1 000 ₽</td>
+                </tr>
+                <tr>
+                  <td>R20–R22</td>
+                  <td><strong>от 4 400 ₽</strong></td>
+                  <td>от 1 200 ₽</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="table-note">
+            * Низкопрофильные шины (профиль ≤ 45) и шины с датчиками TPMS — +15% к стоимости. Точную цену подтвердим по телефону.
+          </p>
+        </div>
+
+        <div class="price-side">
+          <div class="price-side__box reveal">
+            <h3>Что входит в цену</h3>
+            <ul class="checklist">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>
+                Снятие и установка
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>
+                Монтаж и демонтаж шины
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>
+                Балансировка
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>
+                Накачка и проверка давления
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>
+                Протяжка моментом
+              </li>
+            </ul>
+          </div>
+
+          <div class="price-side__cta reveal">
+            <h3>Не уверены в цене?</h3>
+            <p style="margin-top:8px">Позвоните — рассчитаем стоимость за 2 минуты по вашей марке и радиусу.</p>
+            <a class="btn btn--primary btn--block" href="tel:+74951234567">Позвонить</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Как работаем -->
+  <section class="section section--soft" id="process">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="eyebrow">Как работаем</span>
+        <h2>От заявки до готовых колёс — 4 шага</h2>
+        <p>Можно записаться заранее, а можно просто приехать. Очередь двигается быстро: три поста и своя смена.</p>
+      </div>
+
+      <ol class="steps">
+        <li class="step reveal">
+          <div class="step__num">1</div>
+          <h3>Заявка</h3>
+          <p>Оставьте телефон на сайте или позвоните. Уточним радиус и удобное время.</p>
+        </li>
+        <li class="step reveal">
+          <div class="step__num">2</div>
+          <h3>Приёмка</h3>
+          <p>Осмотрим колёса, проверим давление и зафиксируем состояние дисков.</p>
+        </li>
+        <li class="step reveal">
+          <div class="step__num">3</div>
+          <h3>Работа</h3>
+          <p>Монтаж, балансировка и протяжка. Вы ждёте в тёплой зоне с кофе.</p>
+        </li>
+        <li class="step reveal">
+          <div class="step__num">4</div>
+          <h3>Проверка</h3>
+          <p>Контроль давления и момента. Оплата картой или наличными, чек и гарантия.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Запись -->
+  <section class="booking" id="booking">
+    <div class="container">
+      <div class="booking__panel">
+        <div>
+          <span class="eyebrow">Запись</span>
+          <h2>Забронируйте время</h2>
+          <p>Оставьте заявку — перезвоним в течение 15 минут, подберём удобное окно и назовём точную стоимость.</p>
+
+          <div class="booking__contacts">
+            <div class="booking__contact">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z"/></svg>
+              <div>
+                <span>Телефон</span>
+                <b><a href="tel:+74951234567">+7 (495) 123-45-67</a></b>
+              </div>
+            </div>
+            <div class="booking__contact">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 6-9 12-9 12S3 16 3 10a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div>
+                <span>Адрес</span>
+                <b>Москва, ул. Автозаводская, 18, стр. 2</b>
+              </div>
+            </div>
+            <div class="booking__contact">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              <div>
+                <span>Режим работы</span>
+                <b>Ежедневно, 08:00–22:00</b>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <form class="form" id="booking-form" novalidate>
+            <div class="form__grid">
+              <div class="field">
+                <label for="name">Имя</label>
+                <input id="name" name="name" type="text" autocomplete="name" placeholder="Как к вам обращаться">
+                <span class="field__error" data-error-for="name"></span>
+              </div>
+
+              <div class="field">
+                <label for="phone">Телефон</label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+7 (___) ___-__-__">
+                <span class="field__error" data-error-for="phone"></span>
+              </div>
+
+              <div class="field field--full">
+                <label for="car">Автомобиль</label>
+                <input id="car" name="car" type="text" placeholder="Например, Kia Rio 2021">
+                <span class="field__error" data-error-for="car"></span>
+              </div>
+
+              <div class="field field--full">
+                <label for="service">Услуга</label>
+                <select id="service" name="service">
+                  <option value="">Выберите услугу</option>
+                  <option value="montazh">Шиномонтаж</option>
+                  <option value="balans">Балансировка</option>
+                  <option value="pravka">Правка дисков</option>
+                  <option value="remont">Ремонт прокола</option>
+                  <option value="hranenie">Сезонное хранение</option>
+                  <option value="azot">Подкачка азотом</option>
+                </select>
+                <span class="field__error" data-error-for="service"></span>
+              </div>
+
+              <div class="field">
+                <label for="date">Дата</label>
+                <input id="date" name="date" type="date">
+                <span class="field__error" data-error-for="date"></span>
+              </div>
+
+              <div class="field">
+                <label for="time">Время</label>
+                <select id="time" name="time">
+                  <option value="">Выберите время</option>
+                </select>
+                <span class="field__error" data-error-for="time"></span>
+              </div>
+            </div>
+
+            <label class="checkbox" id="consent-label">
+              <input type="checkbox" name="consent" id="consent">
+              <span>Согласен на обработку персональных данных и подтверждаю, что ознакомлен с правилами сервиса</span>
+            </label>
+
+            <button class="btn btn--primary btn--block" type="submit">Записаться</button>
+            <p class="form__hint">Перезвоним в течение 15 минут и подтвердим время.</p>
+          </form>
+
+          <div class="form-success" id="form-success" role="status" aria-live="polite">
+            <div class="form-success__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>
+            </div>
+            <h3>Заявка принята!</h3>
+            <p>Спасибо, <span id="success-name">друг</span>. Перезвоним в течение 15 минут и подтвердим запись.</p>
+            <button type="button" id="form-reset">Отправить ещё одну заявку</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Отзывы -->
+  <section class="section" id="reviews">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="eyebrow">Отзывы</span>
+        <h2>Что говорят клиенты</h2>
+        <p>Средняя оценка 4.9 из 5 на Яндекс.Картах — по 1 200+ отзывам за последние два года.</p>
+      </div>
+
+      <div class="reviews">
+        <article class="review reveal">
+          <div class="stars" role="img" aria-label="Оценка 5 из 5">★★★★★</div>
+          <p>«Приехал в сезон без записи, ждал минут 20. Колёса сделали за полчаса, диски ни одного следа не осталось. Цену назвали сразу, без доплат».</p>
+          <div class="review__author">
+            <span class="avatar">А</span>
+            <div><b>Алексей</b><span>Kia Rio</span></div>
+          </div>
+        </article>
+
+        <article class="review reveal">
+          <div class="stars" role="img" aria-label="Оценка 5 из 5">★★★★★</div>
+          <p>«Ехала на юг, поймала саморез. Приняли без записи, отремонтировали и проверили давление во всех колёсах. Даже денег за подкачку не взяли».</p>
+          <div class="review__author">
+            <span class="avatar">М</span>
+            <div><b>Марина</b><span>Skoda Octavia</span></div>
+          </div>
+        </article>
+
+        <article class="review reveal">
+          <div class="stars" role="img" aria-label="Оценка 5 из 5">★★★★★</div>
+          <p>«Давно искал нормальный сервис для литых дисков — здесь работают аккуратно и на станке с накладками. Беру сезонное хранение, очень удобно».</p>
+          <div class="review__author">
+            <span class="avatar">Д</span>
+            <div><b>Дмитрий</b><span>BMW X5</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Контакты -->
+  <section class="section section--soft" id="contacts">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="eyebrow">Контакты</span>
+        <h2>Заезжайте — мы рядом</h2>
+        <p>5 минут от метро «Автозаводская». Въезд с торца здания, парковка перед воротами.</p>
+      </div>
+
+      <div class="contacts__grid">
+        <div class="contacts__list reveal">
+          <div class="contact-row">
+            <span class="contact-row__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 6-9 12-9 12S3 16 3 10a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            </span>
+            <div>
+              <b>Адрес</b>
+              <p>Москва, ул. Автозаводская, 18, стр. 2</p>
+            </div>
+          </div>
+
+          <div class="contact-row">
+            <span class="contact-row__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z"/></svg>
+            </span>
+            <div>
+              <b>Телефон</b>
+              <p><a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+            </div>
+          </div>
+
+          <div class="contact-row">
+            <span class="contact-row__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            </span>
+            <div>
+              <b>Режим работы</b>
+              <p>Ежедневно, 08:00–22:00. Без выходных и обедов.</p>
+            </div>
+          </div>
+
+          <div class="contact-row">
+            <span class="contact-row__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v12H7l-3 3V4Z"/></svg>
+            </span>
+            <div>
+              <b>Мессенджеры</b>
+              <p>WhatsApp и Telegram — по номеру телефона.</p>
+            </div>
+          </div>
+
+          <a class="btn btn--primary" href="#booking">Записаться онлайн</a>
+        </div>
+
+        <div class="map reveal" role="region" aria-label="Схема проезда: Москва, улица Автозаводская, 18">
+          <div class="map__pulse" aria-hidden="true"></div>
+          <div class="map__pin" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12S3 16 3 10a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="map__label"><b>ГРИП · шиномонтаж</b>Автозаводская, 18, стр. 2</div>
+          <a class="btn btn--ghost map__link" href="https://yandex.ru/maps/?text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%90%D0%B2%D1%82%D0%BE%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D1%8F%2C%2018" target="_blank" rel="noopener noreferrer">Построить маршрут</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Подвал -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <a class="logo" href="#top" aria-label="ГРИП — на главную">
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <circle cx="24" cy="24" r="22" fill="#141619" stroke="#2b2f36" stroke-width="2"/>
+            <circle cx="24" cy="24" r="15" fill="none" stroke="#3a3f47" stroke-width="4" stroke-dasharray="4 5"/>
+            <circle cx="24" cy="24" r="9" fill="none" stroke="#ff6a00" stroke-width="3"/>
+            <circle cx="24" cy="24" r="3" fill="#ff6a00"/>
+          </svg>
+          <span class="logo__text">
+            <span class="logo__name">ГРИП</span>
+            <span class="logo__sub">шиномонтаж</span>
+          </span>
+        </a>
+        <p style="margin-top:16px; max-width: 34ch;">
+          Шиномонтаж, балансировка и хранение шин в Москве с 2013 года.
+          Три поста, ежедневно 08:00–22:00.
+        </p>
+      </div>
+
+      <div>
+        <h4>Услуги</h4>
+        <ul>
+          <li><a href="#services">Шиномонтаж</a></li>
+          <li><a href="#services">Балансировка</a></li>
+          <li><a href="#services">Правка дисков</a></li>
+          <li><a href="#services">Сезонное хранение</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Контакты</h4>
+        <ul>
+          <li><a href="tel:+74951234567">+7 (495) 123-45-67</a></li>
+          <li><a href="#contacts">Москва, Автозаводская, 18</a></li>
+          <li><a href="#booking">Записаться онлайн</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© <span id="year">2026</span> ГРИП — шиномонтаж. Все права защищены.</span>
+      <span>Цены на сайте не являются публичной офертой.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Мобильная панель действий -->
+<div class="mobile-bar" aria-label="Быстрые действия">
+  <a class="btn btn--primary" href="#booking">Записаться</a>
+  <a class="btn btn--ghost" href="tel:+74951234567">Позвонить</a>
+</div>
+
+<!-- Microdata для поисковиков -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "ГРИП — шиномонтаж",
+  "description": "Шиномонтаж, балансировка, правка дисков и сезонное хранение шин в Москве.",
+  "telephone": "+74951234567",
+  "priceRange": "₽₽",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ул. Автозаводская, 18, стр. 2",
+    "addressLocality": "Москва",
+    "postalCode": "115280",
+    "addressCountry": "RU"
+  },
+  "openingHours": "Mo-Su 08:00-22:00",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "1200"
+  }
+}
+</script>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ---------- Год в подвале ---------- */
+  var yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+  /* ---------- Мобильное меню ---------- */
+  var burger = document.querySelector('.burger');
+  var nav = document.getElementById('nav');
+  var body = document.body;
+
+  function closeMenu() {
+    body.classList.remove('menu-open');
+    if (burger) burger.setAttribute('aria-expanded', 'false');
+  }
+
+  if (burger && nav) {
+    burger.addEventListener('click', function () {
+      var opened = body.classList.toggle('menu-open');
+      burger.setAttribute('aria-expanded', opened ? 'true' : 'false');
+      burger.setAttribute('aria-label', opened ? 'Закрыть меню' : 'Открыть меню');
+    });
+
+    nav.addEventListener('click', function (e) {
+      if (e.target.closest('.nav__link')) closeMenu();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeMenu();
+    });
+
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 900) closeMenu();
+    });
+  }
+
+  /* ---------- Тень шапки при скролле ---------- */
+  var header = document.getElementById('header');
+  function onScroll() {
+    if (!header) return;
+    header.classList.toggle('is-scrolled', window.scrollY > 8);
+  }
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  /* ---------- Появление блоков ---------- */
+  var revealItems = document.querySelectorAll('.reveal');
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (!reduceMotion && 'IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    revealItems.forEach(function (el) { observer.observe(el); });
+  } else {
+    revealItems.forEach(function (el) { el.classList.add('is-visible'); });
+  }
+
+  /* ---------- Поля формы ---------- */
+  var form = document.getElementById('booking-form');
+  var successBox = document.getElementById('form-success');
+  var successName = document.getElementById('success-name');
+  var resetBtn = document.getElementById('form-reset');
+  var dateInput = document.getElementById('date');
+  var timeSelect = document.getElementById('time');
+  var phoneInput = document.getElementById('phone');
+  var consent = document.getElementById('consent');
+  var consentLabel = document.getElementById('consent-label');
+
+  /* Минимальная дата — сегодня */
+  if (dateInput) {
+    var today = new Date();
+    var iso = new Date(today.getTime() - today.getTimezoneOffset() * 60000)
+      .toISOString()
+      .slice(0, 10);
+    dateInput.min = iso;
+    dateInput.value = iso;
+  }
+
+  /* Слоты времени 08:00–21:30 */
+  if (timeSelect) {
+    for (var h = 8; h <= 21; h++) {
+      for (var m = 0; m < 60; m += 30) {
+        var hh = String(h).padStart(2, '0');
+        var mm = String(m).padStart(2, '0');
+        var opt = document.createElement('option');
+        opt.value = hh + ':' + mm;
+        opt.textContent = hh + ':' + mm;
+        timeSelect.appendChild(opt);
+      }
+    }
+  }
+
+  /* Маска телефона */
+  function formatPhone(raw) {
+    var d = String(raw).replace(/\D/g, '');
+    if (!d) return '';
+    if (d[0] === '8') d = '7' + d.slice(1);
+    else if (d[0] !== '7') d = '7' + d;
+    d = d.slice(0, 11);
+
+    var out = '+7';
+    if (d.length > 1) out += ' (' + d.slice(1, 4);
+    if (d.length >= 5) out += ') ' + d.slice(4, 7);
+    if (d.length >= 8) out += '-' + d.slice(7, 9);
+    if (d.length >= 10) out += '-' + d.slice(9, 11);
+    return out;
+  }
+
+  if (phoneInput) {
+    phoneInput.addEventListener('input', function () {
+      phoneInput.value = formatPhone(phoneInput.value);
+    });
+    phoneInput.addEventListener('focus', function () {
+      if (!phoneInput.value) phoneInput.value = '+7 (';
+    });
+  }
+
+  /* Ошибки полей */
+  function setError(name, message) {
+    var field = form.querySelector('[name="' + name + '"]');
+    if (!field) return;
+    var wrap = field.closest('.field');
+    var errorEl = form.querySelector('[data-error-for="' + name + '"]');
+    if (wrap) wrap.classList.toggle('has-error', Boolean(message));
+    if (errorEl) errorEl.textContent = message || '';
+    if (message) field.setAttribute('aria-invalid', 'true');
+    else field.removeAttribute('aria-invalid');
+  }
+
+  function clearErrors() {
+    ['name', 'phone', 'car', 'service', 'date', 'time'].forEach(function (n) {
+      setError(n, '');
+    });
+    if (consentLabel) consentLabel.classList.remove('has-error');
+  }
+
+  /* Валидация */
+  function validate() {
+    var ok = true;
+    var name = form.querySelector('[name="name"]');
+    var car = form.querySelector('[name="car"]');
+    var service = form.querySelector('[name="service"]');
+
+    if (!name.value.trim() || name.value.trim().length < 2) {
+      setError('name', 'Укажите имя — хотя бы 2 буквы');
+      ok = false;
+    } else setError('name', '');
+
+    var digits = phoneInput.value.replace(/\D/g, '');
+    if (digits.length !== 11) {
+      setError('phone', 'Введите телефон полностью');
+      ok = false;
+    } else setError('phone', '');
+
+    if (!car.value.trim()) {
+      setError('car', 'Укажите марку и модель автомобиля');
+      ok = false;
+    } else setError('car', '');
+
+    if (!service.value) {
+      setError('service', 'Выберите услугу');
+      ok = false;
+    } else setError('service', '');
+
+    if (!dateInput.value) {
+      setError('date', 'Выберите дату');
+      ok = false;
+    } else setError('date', '');
+
+    if (!timeSelect.value) {
+      setError('time', 'Выберите время');
+      ok = false;
+    } else setError('time', '');
+
+    if (consentLabel) consentLabel.classList.toggle('has-error', !consent.checked);
+    if (!consent.checked) ok = false;
+
+    return ok;
+  }
+
+  /* Отправка (демо: без backend) */
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      clearErrors();
+      if (!validate()) {
+        var firstError = form.querySelector('.has-error input, .has-error select');
+        if (firstError) firstError.focus();
+        return;
+      }
+
+      /* Здесь подключите реальную отправку, например:
+         fetch('/api/booking', { method: 'POST', body: new FormData(form) }) */
+
+      var nameValue = form.querySelector('[name="name"]').value.trim();
+      if (successName) successName.textContent = nameValue.split(' ')[0];
+      form.style.display = 'none';
+      if (successBox) successBox.classList.add('is-visible');
+      if (successBox) successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+
+    form.addEventListener('input', function (e) {
+      var field = e.target.closest('.field');
+      if (field && field.classList.contains('has-error')) {
+        field.classList.remove('has-error');
+        var err = field.querySelector('.field__error');
+        if (err) err.textContent = '';
+        e.target.removeAttribute('aria-invalid');
+      }
+      if (e.target === consent && consentLabel) consentLabel.classList.remove('has-error');
+    });
+  }
+
+  if (resetBtn && form && successBox) {
+    resetBtn.addEventListener('click', function () {
+      form.reset();
+      if (dateInput && dateInput.min) dateInput.value = dateInput.min;
+      clearErrors();
+      successBox.classList.remove('is-visible');
+      form.style.display = '';
+      var first = form.querySelector('input, select');
+      if (first) first.focus();
+    });
+  }
+})();
+</script>
+</body>
+</html>
